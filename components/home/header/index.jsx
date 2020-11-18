@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './header.module.css';
 import classNames from 'classnames';
 import { Help } from '@material-ui/icons';

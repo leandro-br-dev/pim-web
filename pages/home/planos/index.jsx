@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './planos.module.css';
 import Header from '../../../components/home/header';
 import Footer from '../../../components/home/footer';

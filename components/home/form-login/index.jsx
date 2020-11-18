@@ -26,7 +26,7 @@ export default class FormLogin extends Component {
 	};
 
 	handleSubmitAuthenticate = (event) => {
-		fetch('http://localhost:3003/clientes/login/' + this.state.clients.cpf_cnpj, {
+		fetch(`${process.env.REACT_APP_API_URL}/clientes/login/` + this.state.clients.cpf_cnpj, {
 			method: 'post',
 			body: JSON.stringify(this.state.clients),
 			headers: {
