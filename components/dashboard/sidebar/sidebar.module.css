@@ -1,0 +1,22 @@
+.sidebar{
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 160px;
+  background-color: var(--powder-900);
+}
+
+.sidebar li{
+  margin-top: 25px;
+  color: var(--white);  
+  text-align: center;
+}
+
+.sidebar img{
+  width: 36px;
+}
+
+.sidebar h6{
+  font-size: 1.0em;
+  margin-top: 8px;
+}

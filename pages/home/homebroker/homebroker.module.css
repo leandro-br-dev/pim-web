@@ -1,0 +1,14 @@
+.sectionLogo {
+  width: 100%;
+  height: auto;
+  background-color: var(--powder-900);
+
+  display: flex;
+  justify-items: center;
+
+  padding: 5px;
+}
+.divgif {
+  padding-top: 200px;
+  margin-left: 40%;
+}

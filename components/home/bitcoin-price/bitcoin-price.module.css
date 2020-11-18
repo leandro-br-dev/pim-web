@@ -1,0 +1,37 @@
+.BitcoinPrice {
+  margin-top: 80px;
+  width: 380px;
+  height: 340px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--powder-900);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.BitcoinPrice h6 {
+  margin-top: 1rem;
+}
+
+.BitcoinPrice label {
+  margin-bottom: 0.3rem;
+}
+
+.BitcoinPrice small {
+  font-size: 1.5rem;
+}
+
+.BitcoinPrice b {
+  color: var(--yellow);
+}
+
+.focus {
+  margin: 1.5rem;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3rem;
+}

@@ -1,0 +1,27 @@
+.sectionLogo {
+  width: 100%;
+  height: auto;
+  background-color: var(--powder-900);
+
+  display: flex;
+  justify-items: center;
+
+  padding: 5px;
+}
+.content {
+  margin: 3rem;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  padding-top: 50px;
+  text-align: justify;
+}
+.invcontent {
+  display: flex;
+}
+.subtitle {
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}

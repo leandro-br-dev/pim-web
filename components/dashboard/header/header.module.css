@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--powder-900);
+}
+
+.navLeft {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0 0 30px;
+}
+
+
+.navLeft img{
+  margin-bottom: 15px;
+  padding: 0;
+  height: 60px;
+}
+
+.navLeft h5{
+  color: var(--white);
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navLeft {
+    display: none;
+  }
+}
+
+.navRight {
+  width: 30%;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+  align-items: center;
+
+  color: var(--black-100);
+}
+
+.navRight .row{
+  display: flex;
+  flex-direction: row;
+}
+
+.navRight .circle{
+  margin-right: 15px;
+
+  background-color: var(--black-200);
+  border-radius: 2rem;
+
+  height: 50px;
+  width: 50px;
+}
+
+.navRight .iniciais{
+  margin: 15px 0 0 15px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+
+.navRight .nome{
+  margin: 3px 0 3px 0;
+  font-weight: 700;
+}
+
+.navRight .labelCodigo{
+  margin-top: 5px;
+  font-size: medium;
+  color: var(--black-200);
+}
+
+.navRight .codigo{
+  margin: 2px 0 0 3px;
+  font-weight: 700;
+}
+

@@ -1,0 +1,17 @@
+.sectionLogo {
+    width: 100%;
+    height: auto;
+    background-color: var(--powder-900);
+  
+    display: flex;
+    justify-items: center;
+  
+    margin: 0;
+    padding: 0;
+  }
+
+  .sectionLogo img{
+    height: 70px;    
+    margin: 10px 0 0 60px;
+    
+  }

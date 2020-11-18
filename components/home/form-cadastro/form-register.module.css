@@ -1,0 +1,94 @@
+.main {
+  width: 100%;
+  height: calc(100% - 140px);
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 10px;
+
+  width: 1fr;
+  display: flex;
+  flex-direction: row;
+}
+
+.sectionForm {
+  width: 450px;
+  padding: 1rem 3rem 0 0;
+}
+
+.sectionForm h3 {
+  padding-bottom: 2rem;
+}
+
+.sectionImg {
+  padding-top: 4rem;
+}
+
+.inputForms {
+  width: 100%;
+}
+
+.containerFooter {
+  margin-top: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+}
+
+.containerFooter .buttonCustom {
+  margin-top: 0rem;
+  min-height: 40px;
+  min-width: 180px;
+
+  background-color: var(--blue-600);
+
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.invisible {
+  display: none;
+}
+
+.cidadeUF{
+  display: flex;
+  flex-direction: row;
+}
+
+.inputCidade {
+  width: 280px;
+}
+
+.selectUF{
+  margin-left: 25px;
+  width: 100px;
+}
+
+.containerFooter .buttonRetornar{
+  margin-top: 0rem;
+  min-height: 40px;
+  min-width: 180px;
+  margin: 0 1rem 0 1rem;
+  
+  background-color: var(--green-500);
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.inputPassword{
+  margin: 0 1rem 0 1rem;
+}
+
+.erro{
+  color: var(--red-500);
+}
