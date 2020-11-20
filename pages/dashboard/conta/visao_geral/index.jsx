@@ -8,7 +8,7 @@ import Title from '../../../../components/dashboard/title';
 import BitcoinStock from '../../../../components/dashboard/bitcoin_stock';
 import ChartsPatrimony from '../../../../components/dashboard/charts';
 
-export default class Register extends Component {
+export default class Visao_Geral extends Component {
 	state = {};
 	render() {
 		return (

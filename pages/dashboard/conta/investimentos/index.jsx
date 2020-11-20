@@ -6,7 +6,7 @@ import Header from '../../../../components/dashboard/header';
 import Sidebar from '../../../../components/dashboard/sidebar';
 import Title from '../../../../components/dashboard/title';
 
-export default class Register extends Component {
+export default class Investimentos extends Component {
 	state = {};
 	render() {
 		return (
