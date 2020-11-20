@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './servicos.module.css';
 import Header from '../../../components/home/header';
+import Title from '../../../components/home/title';
 import Footer from '../../../components/home/footer';
 
 export default class sobre extends React.Component {
@@ -8,11 +9,8 @@ export default class sobre extends React.Component {
 		return (
 			<div>
 				<Header />
-
+				<Title />
 				<main>
-					<section className={styles.sectionLogo}>
-						<img src="../../img/logo-2.png" />
-					</section>
 					<div className={styles.servicosbody}>
 						<div className={styles.servicoscontent}>
 							<div>
@@ -25,14 +23,15 @@ export default class sobre extends React.Component {
 									investimentos do trader.
 								</p>
 							</div>
-							<div>
-								<img src="../../img/sobre.jpg" />
-							</div>
+							<section className={styles.imgfooter}>
+								<img src="/img/criptomoeadas-4.png" />
+							</section>
 						</div>
+
 						<div className={styles.servicoscontent}>
-							<div>
-								<img src="../../img/sobre.jpg" />
-							</div>
+							<section className={styles.imgfooter}>
+								<img src="/img/criptomoeadas-2.png" />
+							</section>
 							<div>
 								<p className={styles.titulo}>COMPRA E VENDA DE CRIPTOMOEDA</p>
 								<p className={styles.content}>
@@ -58,9 +57,9 @@ export default class sobre extends React.Component {
 									tempos de espera.
 								</p>
 							</div>
-							<div>
-								<img src="../../img/sobre.jpg" />
-							</div>
+							<section className={styles.imgfooter}>
+								<img src="/img/criptomoeadas.png" />
+							</section>
 						</div>
 					</div>
 				</main>

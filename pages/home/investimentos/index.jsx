@@ -39,7 +39,7 @@ export default class investimentos extends React.Component {
 							</p>
 						</div>
 					</div>
-					<div>
+					<div className={styles.imgfooter}>
 						<img src="../../img/investimentos.jpg" />
 					</div>
 				</main>

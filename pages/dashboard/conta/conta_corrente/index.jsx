@@ -1,13 +1,19 @@
 import { Component } from 'react';
 import styles from './conta_corrente.module.css';
+import { TextField } from '@material-ui/core/';
 
 import Head from 'next/head';
 import Header from '../../../../components/dashboard/header';
 import Sidebar from '../../../../components/dashboard/sidebar';
 import Title from '../../../../components/dashboard/title';
 
-export default class Conta_Corrente extends Component {
-	state = {};
+export default class Conta_Correntepx extends Component {
+	state = {
+		valorDisponivel: '10.000,00',
+		valorBloqueado: '500,00',
+		valorLancamentos: '0,00',
+		valorSaldo: '10.500,00'
+	};
 	render() {
 		return (
 			<div className={styles.container}>
@@ -19,6 +25,122 @@ export default class Conta_Corrente extends Component {
 				<Header />
 				<Sidebar />
 				<Title />
+				<main className={styles.main}>
+					<div className={styles.content}>
+						<div className={styles.dadosflex}>
+							<div className={styles.boxdados}>
+								<h6>Saldo Disponível</h6>
+								<h5>{this.state.valorDisponivel}</h5>
+							</div>
+							<div className={styles.boxdados}>
+								<h6>Saldo Bloqueado</h6>
+								<h5>{this.state.valorBloqueado}</h5>
+							</div>
+							<div className={styles.boxdados}>
+								<h6>Lançamentos Futuros</h6>
+								<h5>{this.state.valorLancamentos}</h5>
+							</div>
+							<div className={styles.boxdados}>
+								<h6>Saldo Total</h6>
+								<h5>{this.state.valorSaldo}</h5>
+							</div>
+						</div>
+						<div>
+							<table className={styles.borderLine}>
+								<tr>
+									<td>
+										<h6>Período</h6>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<input
+												className={styles.input}
+												type="radio"
+												id="Hoje"
+												name="periodo"
+												value="1"
+											/>
+											<label for="Hoje">Hoje</label>
+
+											<input
+												className={styles.input}
+												type="radio"
+												id="7_dias"
+												name="periodo"
+												value="7"
+											/>
+											<label for="7_dias">7 dias</label>
+
+											<input
+												className={styles.input}
+												type="radio"
+												id="15_dias"
+												name="periodo"
+												value="15"
+											/>
+											<label for="15_dias">15 dias</label>
+
+											<input
+												className={styles.input}
+												type="radio"
+												id="30_dias"
+												name="periodo"
+												value="30"
+											/>
+											<label for="30_dias">30 dias</label>
+
+											<input
+												className={styles.input}
+												type="radio"
+												id="60_dias"
+												name="periodo"
+												value="60"
+											/>
+											<label for="60_dias">60 dias</label>
+
+											<input
+												className={styles.input}
+												type="radio"
+												id="90_dias"
+												name="periodo"
+												value="90"
+											/>
+											<label for="90_dias">90 dias</label>
+										</div>
+									</td>
+									<td className={styles.dates}>
+										<TextField
+											type="date"
+											name="dataRef"
+											label="De"
+											InputLabelProps={{
+												shrink: true
+											}}
+											minLength="10"
+											maxLength="10"
+											required
+											onChange={this.handleInputChange}
+										/>{' '}
+										<TextField
+											type="date"
+											name="dataRef"
+											label="Até"
+											InputLabelProps={{
+												shrink: true
+											}}
+											minLength="10"
+											maxLength="10"
+											required
+											onChange={this.handleInputChange}
+										/>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</main>
 			</div>
 		);
 	}

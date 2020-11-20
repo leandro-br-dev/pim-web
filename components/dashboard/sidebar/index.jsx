@@ -4,7 +4,7 @@ import styles from './sidebar.module.css';
 export default class sidebar extends React.Component {
 	render() {
 		return (
-			<sidebar className={styles.sidebar}>
+			<nav className={styles.sidebar}>
 				<div>
 					<ul>
 						<li>
@@ -31,7 +31,7 @@ export default class sidebar extends React.Component {
 						</li>
 					</ul>
 				</div>
-			</sidebar>
+			</nav>
 		);
 	}
 }

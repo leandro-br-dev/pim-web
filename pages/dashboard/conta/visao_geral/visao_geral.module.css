@@ -13,3 +13,73 @@
     padding: 35px;
     
   } 
+
+  .middle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .listaInvestimentos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .patrimonio{
+    
+    width: 500px;
+
+  }
+
+  .patrimonio h6{
+
+    text-align: right;
+    font-size: medium;
+    font-weight: 700;
+    color: var(--black-300);
+
+  }
+
+  .patrimonio h5{
+
+    text-align: left;
+    font-size: medium;
+    font-weight: 700;
+    color: var(--black-300);
+
+  }
+
+  .patrimonio h4{
+    text-align: right;
+    font-weight: 700;
+    color: var(--black-600);    
+  }
+
+.tableButton{
+  width: 500px;
+  margin-bottom: 15px;
+}
+.borderLine {
+  justify-content: center;
+  border-bottom: solid 1.5px var(--black-100);    
+}
+  
+.btn_detalhes{  
+  width: 200px;
+  height: 35px;
+
+  border-radius: 25px;
+  border: none;
+
+  background-color: var(--white);
+
+  color: var(--blue-500);
+  text-transform: uppercase;
+  transition: 1s all;
+}
+
+.btn_detalhes:hover{  
+  color: var(--orange);  
+  cursor: pointer;
+}

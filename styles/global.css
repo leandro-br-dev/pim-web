@@ -87,3 +87,20 @@ a {
 small {
   font-size: smaller;
 }
+
+
+.border-left-yellow{
+  border-left: solid 3px var(--yellow-500);    
+}
+
+.border-left-green{
+  border-left: solid 3px var(--green-600);    
+}
+
+.border-left-blue{
+  border-left: solid 3px var(--blue-600);    
+}
+
+.border-left-red{
+  border-left: solid 3px var(--red-600);    
+}

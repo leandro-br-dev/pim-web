@@ -24,19 +24,20 @@
     font-style: italic;
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--black-600);
+    color: var(--blue-600);
     margin-bottom: 10px;
+    
   }
-
   
   .sectionTitle a{
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--black-600);
     margin-right: 25px;
+
+    transition: 1s all;
   }
 
-  .sectionTitle a:hover{
-    text-decoration: underline;
+  .sectionTitle a:hover{  
     color: var(--blue-600);
   }
