@@ -27,7 +27,7 @@ export default class Investimentos extends Component {
 						<label> Rentabilidade Liquida </label>
 					</div>
 					<div>
-						<br> </br>
+						<br />
 						<label> R$ 30.000,00 </label>
 						<label> R$ 40.000,00 </label>
 						<label> 33,33 % </label>
