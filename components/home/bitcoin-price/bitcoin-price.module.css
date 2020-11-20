@@ -26,7 +26,7 @@
 }
 
 .BitcoinPrice b {
-  color: var(--yellow);
+  color: var(--yellow-500);
 }
 
 .focus {

@@ -40,7 +40,7 @@ export default class FormLogin extends Component {
 						localStorage.setItem('id', json.id);
 						localStorage.setItem('nome', json.nome);
 						localStorage.setItem('login', true);
-						Router.push('/dashboard/main');
+						Router.push('/dashboard/conta/visao_geral');
 					}
 				})
 				.catch(this.setState({ erro: 'Usuário ou senha incorreta.' }));
