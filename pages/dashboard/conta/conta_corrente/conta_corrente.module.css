@@ -7,15 +7,14 @@
     background-color: var(--white);
   
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;    
 
-    padding: 35px;
+    padding: 5%;
     
   } 
 
 .input {
-    margin: .4rem;
+    margin: .8rem;
 }
 .dadosflex {
     display: flex;
@@ -51,12 +50,29 @@
     color: var(--black-600);
 }
 
-.borderLine {    
+.periodoBox {    
+    width: auto;
+    max-width: 1090px;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+
+    justify-content: space-around;
     border-bottom: solid 1.5px var(--black-100);    
     border-right: solid 1.5px var(--black-100);      
  }
-    
+
+ .periodoBox h6{
+     font-weight: bold;
+     color: var(--black-600);
+ }
+
+ .radioPeriodo{     
+     margin: 0;
+     padding-top: 15px;
+ }
  
-.dates{
+.dates{    
     padding: 0 0 15px 15px;
   }

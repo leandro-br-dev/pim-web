@@ -1,0 +1,28 @@
+.bank_statement{
+    width: auto;
+    max-width: 1090px;
+
+    margin-top: 25px;
+    
+    
+
+    border-bottom: solid 1.5px var(--black-100);    
+    border-right: solid 1.5px var(--black-100);      
+}
+
+.bank_statement table{
+    
+    width: 1090px;
+    table-layout: auto;
+}
+
+.bank_statement th{    
+    font-weight: bold;
+    color: var(--black-600);
+    padding: 5px 0;
+}
+
+.bank_statement td{
+    color: var(--black-600);
+    padding: 10px 0;
+}
