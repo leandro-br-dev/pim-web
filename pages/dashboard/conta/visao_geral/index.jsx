@@ -21,7 +21,7 @@ export default class Visao_Geral extends Component {
 
 				<Header />
 				<Sidebar />
-				<Title />
+				<Title pasta="conta" pagAtiva="visao_geral" />
 
 				<main className={styles.main}>
 					<section className={styles.middle}>

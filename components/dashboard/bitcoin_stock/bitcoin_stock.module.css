@@ -48,7 +48,7 @@
 
   color: var(--white);
   text-transform: uppercase;
-  transition: 1s all;
+  transition: 1s color;
 }
 
 .btn_investir:hover{  
@@ -69,7 +69,7 @@
 
   color: var(--blue-500);
   text-transform: uppercase;
-  transition: 1s all;
+  transition: 1s color;
 }
 
 .btn_detalhes:hover{  

@@ -1,0 +1,65 @@
+.containerContratos{ 
+
+    display: flex;
+  
+    width: auto;
+    max-width: 1090px;
+  
+    height: auto;
+    min-height: 120px;
+    
+    padding: 8px 10px;
+    
+    border-radius: 3px; 
+    margin-bottom: 25px;
+    
+    border-bottom: solid 1.5px var(--black-100);      
+    
+  }
+  
+  .containerContratos img{     
+    
+    width: 45px;
+    height: 45px;  
+
+    }
+  
+  .containerContratos table{
+    width: auto;
+    max-width: 1090px;
+  }
+  
+  .containerContratos th{
+    
+    text-align: left;
+    color: var(--black-400);
+  
+    padding: 0 20px 3px 0;
+  }
+  
+  .containerContratos td{      
+    
+    color: var(--black-600);
+    padding-right: 20px;
+  
+  }
+
+  .descricao{    
+    width: auto;
+    max-width: 700px;
+  }
+
+  .left{
+    text-align: left;    
+  }
+
+  .center{    
+    text-align: center;
+  }
+
+
+  
+  .valor{
+    color: var(--black-500);
+  }
+  

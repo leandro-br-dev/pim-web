@@ -7,9 +7,6 @@
     background-color: var(--white);
   
     display: flex;
-    flex-direction: row;
 
-
-    justify-content: center;
-    align-items: center;
+    padding: 4%;
   } 

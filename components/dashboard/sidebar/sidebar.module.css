@@ -26,7 +26,7 @@
 .sidebar h6{
   font-size: 1.0em;
   margin-top: 8px;
-  transition: 1s all;
+  transition: 1s color;
 }
 
 .sidebar a:hover{  

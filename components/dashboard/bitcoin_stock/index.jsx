@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import styles from './bitcoin_stock.module.css';
 import cn from 'classnames';
 

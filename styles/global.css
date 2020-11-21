@@ -89,6 +89,14 @@ small {
 }
 
 
+.color-blue{
+  color: var(--blue-500);
+}
+
+.color-red{
+  color: var(--red-600)
+}
+
 .border-left-yellow{
   border-left: solid 3px var(--yellow-500);    
 }

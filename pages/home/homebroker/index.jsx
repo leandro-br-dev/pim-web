@@ -14,6 +14,8 @@ export default class homebroker extends React.Component {
 				<main>
 					<div className={styles.divgif}>
 						<img src="../../img/carregando.gif" />
+						<p>Estamos te direcionando para o Homebroker Quantum Finance</p>
+						<p>Por favor aguarde ...</p>
 					</div>
 				</main>
 				<Footer />

@@ -33,7 +33,7 @@ export default class Conta_Correntepx extends Component {
 
 				<Header />
 				<Sidebar />
-				<Title />
+				<Title pasta="conta" pagAtiva="conta_corrente" />
 				<main className={styles.main}>
 					<div className={styles.content}>
 						<div className={styles.dadosflex}>

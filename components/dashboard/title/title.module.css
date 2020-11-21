@@ -32,10 +32,10 @@
   .sectionTitle a{
     font-size: 0.9rem;
     font-weight: bold;
-    color: var(--black-600);
+    
     margin-right: 25px;
 
-    transition: 1s all;
+    transition: 1s color;
   }
 
   .sectionTitle a:hover{  

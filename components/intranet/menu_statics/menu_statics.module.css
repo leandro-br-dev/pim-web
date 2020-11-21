@@ -1,0 +1,34 @@
+.menu{
+    display: flex;
+    width: 80%;
+    background-image: linear-gradient( 45deg, blue, purple);
+    padding: 4%;
+    margin: 10%;
+    color: white;
+    margin: center;
+}
+
+.DivA {
+    margin: 2%;
+    padding: 2%;
+  
+}
+.DivB {
+    margin: 2%;
+    padding: 2%;
+    font-size: 1em;
+}
+
+.DivC {
+    margin: 2%;
+    padding: 2%;
+    font-size: 1em;
+}
+
+.DivD {
+    margin: 2%;
+    padding: 2%;
+    font-size: 1em;
+}
+
+   
