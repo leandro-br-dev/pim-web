@@ -6,25 +6,25 @@ export default class menu_statics extends Component {
 	render() {
 		return (
 			<div className={styles.menu}>
-				<div className={styles.DivA}>
-					<h1>Ativos</h1>
+				<div className={styles.DivInternas}>
+					<h3>Ativos</h3>
 					<br />
-					<p>72%</p>
+					<p className={styles.paragrafo1}>32%</p>
 				</div>
-				<div className={styles.DivB}>
+				<div className={styles.DivInternas}>
 					<h3>Inadimplentes</h3>
 					<br />
-					<p>72%</p>
+					<p className={styles.paragrafo1}>42%</p>
 				</div>
-				<div className={styles.DivC}>
-					<h1>Bloqueados</h1>
+				<div className={styles.DivInternas}>
+					<h3>Bloqueados</h3>
 					<br />
-					<p>72%</p>
+					<p className={styles.paragrafo1}>52%</p>
 				</div>
-				<div className={styles.DivD}>
-					<h1>Cancelados</h1>
+				<div className={styles.DivInternas}>
+					<h3>Cancelados</h3>
 					<br />
-					<p>72%</p>
+					<p className={styles.paragrafo1}>62%</p>
 				</div>
 			</div>
 		);

@@ -1,34 +1,24 @@
 .menu{
-    display: flex;
-    width: 80%;
-    background-image: linear-gradient( 45deg, blue, purple);
-    padding: 4%;
-    margin: 10%;
+    display: flex;    
+    justify-content: space-around;
+    width: 96%;
+    height: auto;
+    background-image: linear-gradient( to right, var(--blue-600), var(--purple-600));
+    padding: 2%;
+    margin: 2%;
     color: white;
     margin: center;
+    text-align: center;
+    margin-top: 14%;
 }
 
-.DivA {
-    margin: 2%;
-    padding: 2%;
+
+
+.DivInternas {
+    
   
 }
-.DivB {
-    margin: 2%;
-    padding: 2%;
-    font-size: 1em;
-}
 
-.DivC {
-    margin: 2%;
-    padding: 2%;
-    font-size: 1em;
+.paragrafo1 {
+font-size: 4em;
 }
-
-.DivD {
-    margin: 2%;
-    padding: 2%;
-    font-size: 1em;
-}
-
-   
