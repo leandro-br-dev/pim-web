@@ -57,6 +57,8 @@ export default class login extends React.Component {
 					<div>
 						<h1>QUANTUM FINANCE</h1>
 
+						<br />
+
 						<h4>PORTAL INTRANET</h4>
 
 						<form onSubmit={this.handleSubmitAuthenticate}>
@@ -90,13 +92,6 @@ export default class login extends React.Component {
 							<Button type="submit" className={styles.buttonCustom} variant="contained">
 								Acessar minha conta
 							</Button>
-							<br />
-							<br />
-							<br />
-
-							<a href="#" target="_self">
-								<h6 className={styles.link}>Esqueci minha senha</h6>
-							</a>
 						</form>
 					</div>
 				</main>

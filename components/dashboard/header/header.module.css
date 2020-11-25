@@ -83,3 +83,12 @@
   font-weight: 700;
 }
 
+.logout{
+  margin: 0 15px;
+  color: var(--black-100);
+  text-align: center;  
+}
+
+.logout:hover{  
+  cursor: pointer;
+}

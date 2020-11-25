@@ -1,3 +1,8 @@
+.container{
+  width: 100vw;  
+  height: 100vh;   
+}
+
 .main {
     position: fixed;
     left: 160px;

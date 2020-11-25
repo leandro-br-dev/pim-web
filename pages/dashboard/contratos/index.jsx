@@ -8,7 +8,53 @@ import Title from '../../../components/dashboard/title';
 import Contracts from '../../../components/dashboard/contracts';
 
 export default class Investimentos extends Component {
-	state = {};
+	state = {
+		constratos: [],
+		listaContratos: [],
+		conta: {}
+	};
+
+	async consultaConta(cpf_cnpj) {
+		const data = await fetch(`${process.env.REACT_APP_API_URL}/contas/${cpf_cnpj}`);
+		const json = await data.json();
+
+		if (json != null) {
+			await this.setState({ conta: json });
+		}
+	}
+
+	async consultaContrato() {
+		const data = await fetch(`${process.env.REACT_APP_API_URL}/contratos/${this.state.conta.id}`);
+		const json = await data.json();
+		if (json != null) {
+			await this.setState({ contratos: json });
+			await this.carregaContratos();
+		}
+	}
+
+	async carregaContratos() {
+		const rows = [];
+
+		await this.state.contratos.forEach((contrato) => {
+			rows.push(
+				<Contracts
+					color="border-left-yellow"
+					descricao={contrato.desc_contrato}
+					valor={contrato.vl_contrato}
+					data={contrato.dt_contrato}
+					local_file={contrato.anexo_contrato}
+				/>
+			);
+		});
+
+		await this.setState({ listaContratos: rows });
+	}
+
+	async componentDidMount() {
+		const cpf_cnpj = await localStorage.getItem('cpf_cnpj');
+		await this.consultaConta(cpf_cnpj);
+		await this.consultaContrato();
+	}
 
 	render() {
 		return (
@@ -27,31 +73,7 @@ export default class Investimentos extends Component {
 						<h5>Contratos Inteligentes</h5>
 						<h6>Plataforma digital - Etherium</h6>
 					</div>
-					<div>
-						<Contracts
-							color="border-left-yellow"
-							descricao="Aquisição de Imóvel residencial, Av Primeiro de Maio, 132 - Apto 14 - Aparecida - Santos/SP"
-							valor="450000.00"
-							data="15/03/2020"
-							local_file="#"
-						/>
-
-						<Contracts
-							color="border-left-yellow"
-							descricao="Contrato de prestação de serviços junto ao escritório de advocacia MARQUES E FILHOS ASSOCIADOS"
-							valor="30000.00"
-							data="23/122019"
-							local_file="#"
-						/>
-
-						<Contracts
-							color="border-left-yellow"
-							descricao="Aquisição de lote urbanizado, Rua Marginal S/N - Jardim Palmeiras - Itanhaém/SP"
-							valor="50000.00"
-							data="07/10/2019"
-							local_file="#"
-						/>
-					</div>
+					<div>{this.state.listaContratos}</div>
 				</main>
 			</div>
 		);

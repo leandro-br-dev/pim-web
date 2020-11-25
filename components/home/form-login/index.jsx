@@ -3,13 +3,22 @@ import Router from 'next/router';
 import styles from './form-login.module.css';
 import { TextField, Button, FormControl, Input, InputLabel } from '@material-ui/core/';
 
+function makeid(length) {
+	var result = '';
+	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var charactersLength = characters.length;
+	for (var i = 0; i < length; i++) {
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
+}
+
 export default class FormLogin extends Component {
 	state = {
 		clients: {
-			id: '',
-			nome: '',
 			cpf_cnpj: '',
 			password: '',
+			chave_acesso: makeid(12),
 			ativo: true
 		},
 		erro: null
@@ -27,7 +36,7 @@ export default class FormLogin extends Component {
 
 	handleSubmitAuthenticate = (event) => {
 		fetch(`${process.env.REACT_APP_API_URL}/clientes/login/` + this.state.clients.cpf_cnpj, {
-			method: 'post',
+			method: 'put',
 			body: JSON.stringify(this.state.clients),
 			headers: {
 				'Content-Type': 'application/json'
@@ -37,8 +46,11 @@ export default class FormLogin extends Component {
 				.json()
 				.then((json) => {
 					if (json != null) {
+						console.log(json);
 						localStorage.setItem('id', json.id);
 						localStorage.setItem('nome', json.nome);
+						localStorage.setItem('cpf_cnpj', json.cpf_cnpj);
+						localStorage.setItem('chave_acesso', json.chave_acesso);
 						localStorage.setItem('login', true);
 						Router.push('/dashboard/conta/visao_geral');
 					}

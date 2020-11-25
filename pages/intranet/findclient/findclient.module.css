@@ -1,0 +1,54 @@
+.tabeladadosclient {
+    display: flex;
+    width: 700px;
+    border: solid 1px var(--black-100);   
+    margin: 0px;   
+}
+.tabeladadosclient td{    
+    text-align: right;
+    align-items: center;
+    color: var(--black-500);    
+    padding: 6px 10px;
+}
+.geral h2{
+    margin-left: 30px;
+}
+.container{
+    width: 100vw;  
+    height: 100vh;  
+    display: flex;  
+}
+.main{
+    width: 100%;
+    height: 100%;    
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--purple-100);
+}
+.geral {
+    width: 400px;
+    font-size: 2.2vh;
+    color: var(--black-500);
+    margin: 15px;
+}
+.geral th {
+    color: var(--black-700);
+    padding: 5px 0 0 10px;
+    margin-block-end: auto;
+}
+.geral tr {
+    color: var(--black-700);
+    border: solid 1px var(--black-100);
+    padding: 0px 0 0 10px;
+}
+.docker{
+    width: 70%!important;
+    margin-left: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.mainbg {
+    background-color:var(--white);
+}

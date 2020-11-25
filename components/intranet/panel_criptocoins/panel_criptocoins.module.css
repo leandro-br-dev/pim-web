@@ -1,0 +1,40 @@
+.criptocoins{
+    width: 400px;    
+    border: solid 1px var(--black-100);
+    box-shadow: 4px 4px 4px var(--black-200);
+    margin: 20px;
+}
+
+.criptocoins table{
+    width: 400px;
+    background-color: var(--white);
+}
+
+.criptocoins th{        
+    color: var(--black-700);
+    border-bottom: solid 1px var(--black-100);
+    padding: 10px 0 0 10px;
+}
+
+.criptocoins div{
+    display: flex;
+    align-items: center;    
+    margin-top: 5px;
+}
+
+.criptocoins td{    
+    text-align: right;
+    align-items: center;
+    color: var(--black-500);    
+    padding: 6px 10px;
+}
+
+.criptocoins td img{
+    width: 35px;
+    height: 35px;
+}
+
+.criptocoins h6{
+    margin: 5px 10px;
+}
+
