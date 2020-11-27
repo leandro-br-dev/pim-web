@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
-import Sidebar from '../../../components/intranet/sidebar';
-import styles from './login.module.css';
+import Router from 'next/router';
+import Head from 'next/head';
+import Sidebar from '../../components/intranet/sidebar';
+import styles from './relatorios.module.css';
 import { TextField, Button, FormControl, Input, InputLabel } from '@material-ui/core/';
+
+function makeid(length) {
+	var result = '';
+	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var charactersLength = characters.length;
+	for (var i = 0; i < length; i++) {
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
+}
 
 export default class login extends React.Component {
 	state = {
 		clients: {
-			id: '',
-			nome: '',
 			cpf_cnpj: '',
 			password: '',
+			chave_acesso: makeid(12),
 			ativo: true
 		},
 		erro: null
@@ -26,24 +37,26 @@ export default class login extends React.Component {
 	};
 
 	handleSubmitAuthenticate = (event) => {
-		fetch(`${process.env.REACT_APP_API_URL}/intranet/login/` + this.state.clients.cpf_cnpj, {
-			method: 'post',
+		fetch(`${process.env.REACT_APP_API_URL}/clientes/login/` + this.state.clients.cpf_cnpj, {
+			method: 'put',
 			body: JSON.stringify(this.state.clients),
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		}).then((response) => {
-			response
-				.json()
-				.then((json) => {
-					if (json != null) {
-						localStorage.setItem('id', json.id);
-						localStorage.setItem('nome', json.nome);
-						localStorage.setItem('login', true);
-						Router.push('/dashboard/conta/visao_geral');
-					}
-				})
-				.catch(this.setState({ erro: 'Usuário ou senha incorreta.' }));
+			response.json().then((json) => {
+				if (json != null && json.perfil != 'cliente') {
+					localStorage.setItem('id', json.id);
+					localStorage.setItem('nome', json.nome);
+					localStorage.setItem('cpf_cnpj', json.cpf_cnpj);
+					localStorage.setItem('chave_acesso', json.chave_acesso);
+					localStorage.setItem('perfil', json.perfil);
+					localStorage.setItem('login', true);
+					Router.push('/intranet/dashboard');
+				} else {
+					this.setState({ erro: 'Usuário ou senha incorreta. Acesso permitido apenas para funcionários.' });
+				}
+			});
 		});
 
 		event.preventDefault();
@@ -52,13 +65,16 @@ export default class login extends React.Component {
 	render() {
 		return (
 			<div className={styles.container}>
+				<Head>
+					<title>Intranet Quantum Finance - Login</title>
+					<link rel="icon" href="/../../../favicon.ico" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				</Head>
 				<Sidebar />
 				<main className={styles.main}>
 					<div>
 						<h1>QUANTUM FINANCE</h1>
-
 						<br />
-
 						<h4>PORTAL INTRANET</h4>
 
 						<form onSubmit={this.handleSubmitAuthenticate}>
@@ -89,8 +105,13 @@ export default class login extends React.Component {
 							<br />
 							<br />
 
-							<Button type="submit" className={styles.buttonCustom} variant="contained">
-								Acessar minha conta
+							<Button
+								type="submit"
+								className={styles.buttonCustom}
+								variant="contained"
+								onClick={this.handleSubmitAuthenticate}
+							>
+								Acessar
 							</Button>
 						</form>
 					</div>

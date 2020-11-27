@@ -3,8 +3,43 @@ import styles from './list_clients.module.css';
 import { Help, FilterList } from '@material-ui/icons';
 import { Button } from '@material-ui/core/';
 
+class Linha extends Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (
+			<tr>
+				<td>{this.props.id}</td>
+				<td>{this.props.cpf_cnpj}</td>
+				<td>{this.props.nome}</td>
+			</tr>
+		);
+	}
+}
+
 export default class list_clients extends Component {
-	state = {};
+	constructor(props) {
+		super(props);
+	}
+	state = {
+		linhasClientes: []
+	};
+
+	async carregaClientes(base) {
+		const linhas = [];
+
+		base.forEach((element) => {
+			linhas.push(<Linha id={element.id} cpf_cnpj={element.cpf_cnpj} nome={element.nome} />);
+		});
+
+		await this.setState({ linhasClientes: linhas });
+	}
+
+	async componentDidMount() {
+		await this.carregaClientes(this.props.base);
+	}
+
 	render() {
 		return (
 			<div>
@@ -21,50 +56,14 @@ export default class list_clients extends Component {
 						</td>
 					</tr>
 					<tr>
-						<th>#</th>
-						<th>CPF/CNPJ</th>
-						<th>CLIENTE</th>
-					</tr>
-
-					<tr>
-						<td>1</td>
-						<td>345.701.098-61</td>
-						<td>LEANDRO DE SOUZA</td>
+						<thead>
+							<th>#</th>
+							<th>CPF/CNPJ</th>
+							<th>CLIENTE</th>
+						</thead>
 					</tr>
 					<tr>
-						<td>2</td>
-						<td>283.177.667-78</td>
-						<td>LEONARDO LEMOS NOGUEIRA</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>322.874.292-17</td>
-						<td>CHRISTIANO BEZERRA PERES</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>299.898.244-78</td>
-						<td>ANTÔNIO JOSÉ SANTOS DE MELO</td>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>312.290.338-26</td>
-						<td>ROBERTA FERNANDES SCHMIDT</td>
-					</tr>
-					<tr>
-						<td />
-						<td />
-						<td />
-					</tr>
-					<tr>
-						<td />
-						<td />
-						<td />
-					</tr>
-					<tr>
-						<td />
-						<td />
-						<td />
+						<tbody>{this.state.linhasClientes}</tbody>
 					</tr>
 				</table>
 			</div>

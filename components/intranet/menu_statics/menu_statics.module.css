@@ -3,9 +3,9 @@
     justify-content: space-around;
     width: 96%;
     height: auto;
-    background-image: linear-gradient( to right, var(--blue-600), var(--purple-600));
+    background-image: linear-gradient( to right, var(--blue-400), var(--purple-600));
     padding: 2%;
-    margin: 0 2% 2% 2%;
+    margin: 1% 2%;
     color: white;
     margin: center;
     text-align: center;
@@ -13,19 +13,18 @@
 
 .portintranet {
 color: var(--blue-300);
-font-size: 3vh;
 margin-top: 45px;
 padding-left: 2%;
 }
 
 .dadosgraf {
-    font-size: 3vh;
     color: var(--black-500);
     text-align: center;
     font-weight: bold;
 }
 
 .containergraf {
+    margin-top: 1%;
     display: flex;
     justify-content: space-between;
 }
@@ -33,7 +32,6 @@ padding-left: 2%;
 .textograf {
     display: flex;
     color: var(--black-500);
-    font-size: 2vh;
     padding: 0px 15px;
 }
 .cabecalho{
@@ -48,18 +46,6 @@ padding-left: 2%;
     margin-top: 1%;
     margin-right: 1%;
     margin-left: 47px;
-    font-size: 5vh;
-}
-.cabecalho ul{
-    list-style:none;
-    right: 25px;
-    position: fixed;
-    padding: 10px 10px;
-}
-.cabecalho li{
-    display: inline;
-    margin-right: 15px;
-    
 }
 
 .estatisticas {
@@ -74,5 +60,9 @@ padding-left: 2%;
 
 .paragrafo1 {
 font-size: 4em;
+}
+
+.icon:hover{
+    cursor: pointer;
 }
 

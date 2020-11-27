@@ -1,12 +1,15 @@
 .criptocoins{
     width: 400px;    
+    height: auto;
+    max-height: 285px;
     border: solid 1px var(--black-100);
     box-shadow: 4px 4px 4px var(--black-200);
-    margin: 20px;
+    margin: 0 1rem;
 }
 
 .criptocoins table{
     width: 400px;
+    height: auto;
     background-color: var(--white);
 }
 

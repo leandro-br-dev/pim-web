@@ -14,8 +14,9 @@ export default class Register extends Component {
 		return (
 			<div className={styles.container}>
 				<Head>
-					<title>Quantum Finance - Seu banco digital de criptomoedas</title>
+					<title>Quantum Finance - Acesse agora</title>
 					<link rel="icon" href="/../../../favicon.ico" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				</Head>
 
 				<Header />

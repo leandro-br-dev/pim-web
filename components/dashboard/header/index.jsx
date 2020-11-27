@@ -14,6 +14,7 @@ export default class header extends React.Component {
 	logout = (event) => {
 		localStorage.setItem('id', '');
 		localStorage.setItem('nome', '');
+		localStorage.setItem('cpf_cnpj', '');
 		localStorage.setItem('login', false);
 		localStorage.setItem('chave_acesso', '');
 		Router.push('/');

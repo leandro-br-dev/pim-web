@@ -1,9 +1,22 @@
+
+@media only screen and (max-width: 500px) {
+    .sidebar {
+      display: none;
+    }   
+  }
+
 .sidebar {
-    width: 230px;
-    height: 100vh;    
+    min-width: 230px;
+    width: auto;
+    height: auto;    
+    min-height: 100vh;
     background-color: var(--powder-950);
    
     border-right: solid 2px var(--blue-500);
+}
+
+.invisible{
+    display: none;
 }
 
 .usuario{
@@ -15,7 +28,7 @@
 }
 
 .sidebar li{
-    display: flex;
+    display: flex;    
     color: var(--black-100);
     margin: 15px 20px ;
     font-size: 1rem;
@@ -32,24 +45,22 @@ color: var(--blue-300);
 
 }
 
+.sidebar a{
+    display: flex;
+}
+
 .icon{
-    position: fixed;
-    left: 165px;
+    position: absolute;
+    left: 180px;
 }
 
-.menubar1 {
+
+.menubar {
     color: var(--black-100);   
-    display: flex;
-    margin: 6px 8px ;
-    font-size: 1.5vh;
+    margin: 6px 8px;    
+    font-size: 1rem;
 }
 
-.menubar2 {
-    color: var(--black-100);   
-    display: flex;
-    margin: 6px 8px ;
-    font-size: 2vh;
-}
 
 .menuint1 {
     display: flex;

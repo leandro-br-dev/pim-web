@@ -1,0 +1,26 @@
+
+.header{    
+    height: 75px;
+    width: auto;
+    min-width: calc(100% -230px);
+
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    border-bottom: solid 1px var(--black-200);
+}
+
+.header div{
+    color: var(--black-200);
+    display: flex;
+    align-items: center;
+
+    margin: 0 1rem;
+}
+
+.header div .icon:hover{    
+    cursor: pointer;
+    padding-right: 2rem;    
+}

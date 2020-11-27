@@ -1,11 +1,14 @@
 .container {
     width: 100vw;  
-    height: 100vh;  
+    height: auto;    
+    min-height: 100vh; 
     display: flex;  
 }
 
 .main{    
     width: 100vw;
+    height: auto;    
+    min-height: 100vh;
     background: linear-gradient(To Right, var(--blue-500), var(--purple-600));
 
     display: flex;
@@ -30,7 +33,13 @@
 .title {
     color: #000;
 }
-.inputforms {
+.inputForms {
+    
+    width: 250px;
     background-color: transparent;
       color: var(--blue-500);
+}
+
+.buttonCustom{
+    width: 250px;
 }

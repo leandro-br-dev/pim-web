@@ -42,20 +42,19 @@ export default class FormLogin extends Component {
 				'Content-Type': 'application/json'
 			}
 		}).then((response) => {
-			response
-				.json()
-				.then((json) => {
-					if (json != null) {
-						console.log(json);
-						localStorage.setItem('id', json.id);
-						localStorage.setItem('nome', json.nome);
-						localStorage.setItem('cpf_cnpj', json.cpf_cnpj);
-						localStorage.setItem('chave_acesso', json.chave_acesso);
-						localStorage.setItem('login', true);
-						Router.push('/dashboard/conta/visao_geral');
-					}
-				})
-				.catch(this.setState({ erro: 'Usuário ou senha incorreta.' }));
+			response.json().then((json) => {
+				if (json != null) {
+					console.log(json);
+					localStorage.setItem('id', json.id);
+					localStorage.setItem('nome', json.nome);
+					localStorage.setItem('cpf_cnpj', json.cpf_cnpj);
+					localStorage.setItem('chave_acesso', json.chave_acesso);
+					localStorage.setItem('login', true);
+					Router.push('/dashboard/conta/visao_geral');
+				} else {
+					this.setState({ erro: 'Usuário ou senha incorreta.' });
+				}
+			});
 		});
 
 		event.preventDefault();

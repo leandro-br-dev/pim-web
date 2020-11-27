@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './investimentos.module.css';
+import Head from 'next/head';
 import Header from '../../../components/home/header';
 import Footer from '../../../components/home/footer';
 
@@ -7,6 +8,11 @@ export default class investimentos extends React.Component {
 	render() {
 		return (
 			<div>
+				<Head>
+					<title>Quantum Finance - Investimentos</title>
+					<link rel="icon" href="/../../../favicon.ico" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				</Head>
 				<Header />
 				<section className={styles.sectionLogo}>
 					<img src="../../img/logo-2.png" />

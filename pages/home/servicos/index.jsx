@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './servicos.module.css';
+import Head from 'next/head';
 import Header from '../../../components/home/header';
 import Title from '../../../components/home/title';
 import Footer from '../../../components/home/footer';
@@ -8,6 +9,11 @@ export default class sobre extends React.Component {
 	render() {
 		return (
 			<div>
+				<Head>
+					<title>Quantum Finance - Serviços</title>
+					<link rel="icon" href="/../../../favicon.ico" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				</Head>
 				<Header />
 				<Title />
 				<main>

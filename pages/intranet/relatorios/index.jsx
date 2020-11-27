@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './idletable.module.css';
+import Head from 'next/head';
 import Sidebar from '../../../components/intranet/sidebar';
 import MenuStatics from '../../../components/intranet/menu_statics';
 import ListClients from '../../../components/intranet/list_clients';
