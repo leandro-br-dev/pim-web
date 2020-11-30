@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
 	};
 
 	async consultaClientes(cpf_cnpj) {
-		const data = await fetch(`${process.env.REACT_APP_API_URL}/clientes`);
+		const data = await fetch(`${process.env.REACT_APP_API_URL}/relatorios/clientes`);
 		const json = await data.json();
 
 		if (json != null) {
@@ -25,7 +25,7 @@ export default class Dashboard extends Component {
 	async carregaClientes() {
 		const tabela = [];
 
-		tabela.push(<ListClients base={this.state.listaClientes} />);
+		tabela.push(<ListClients relatorio="clientes" base={this.state.listaClientes} />);
 
 		await this.setState({ tabelaClientes: tabela });
 	}

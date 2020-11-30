@@ -1,12 +1,55 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import styles from './sidebar.module.css';
 import { Help, EventNoteSharp, AssignmentInd, List, Dashboard } from '@material-ui/icons';
 
+class LinkSidebar extends Component {
+	render() {
+		if (this.props.icon == 'AssignmentInd') {
+			return (
+				<li>
+					<Link href={`/intranet/relatorios?consulta=${this.props.href}`}>
+						<a>
+							{this.props.titulo}
+							<AssignmentInd className={styles.icon} fontSize="small" />
+						</a>
+					</Link>
+				</li>
+			);
+		}
+
+		if (this.props.icon == 'EventNoteSharp') {
+			return (
+				<li>
+					<Link href={`/intranet/relatorios?consulta=${this.props.href}`}>
+						<a>
+							{this.props.titulo}
+							<EventNoteSharp className={styles.icon} fontSize="small" />
+						</a>
+					</Link>
+				</li>
+			);
+		}
+
+		if (this.props.icon == 'List') {
+			return (
+				<li>
+					<Link href={`/intranet/relatorios?consulta=${this.props.href}`}>
+						<a>
+							{this.props.titulo}
+							<List className={styles.icon} fontSize="small" />
+						</a>
+					</Link>
+				</li>
+			);
+		}
+	}
+}
+
 export default class sidebar extends React.Component {
 	state = {
-		login: '',
-		perfil: '',
-		nome: ''
+		ln: '',
+		perfil: ''
 	};
 
 	async componentDidMount() {
@@ -41,34 +84,12 @@ export default class sidebar extends React.Component {
 							<h6 className={styles.menuint2}>Relatórios</h6>
 							<br />
 						</li>
-						<li>
-							<a href="/intranet/relatorios">
-								Clientes
-								<AssignmentInd className={styles.icon} fontSize="small" />
-							</a>
-						</li>
-						<li>
-							<a href="/intranet/relatorios">
-								Aniversariantes
-								<EventNoteSharp className={styles.icon} fontSize="small" />
-							</a>
-						</li>
-						<li>
-							<a href="/intranet/relatorios">
-								Inadimplentes <List className={styles.icon} fontSize="small" />
-							</a>
-						</li>
-						<li>
-							<a href="/intranet/relatorios">
-								Bloqueados <List className={styles.icon} fontSize="small" />
-							</a>
-						</li>
-						<li>
-							<a href="/intranet/relatorios">
-								Cancelados
-								<Help className={styles.icon} fontSize="small" />
-							</a>
-						</li>
+
+						<LinkSidebar href="clientes" titulo="Clientes" icon="AssignmentInd" />
+						<LinkSidebar href="aniversariantes" titulo="Aniversariantes" icon="EventNoteSharp" />
+						<LinkSidebar href="inadimplentes" titulo="Inadimplentes" icon="List" />
+						<LinkSidebar href="bloqueados" titulo="Bloqueados" icon="List" />
+						<LinkSidebar href="cancelados" titulo="Cancelados" icon="List" />
 					</ul>
 				</div>
 			</nav>

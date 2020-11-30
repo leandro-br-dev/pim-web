@@ -34,6 +34,10 @@
     font-size: 1rem;
 }
 
+.sidebar li:hover{
+    cursor: pointer;
+}
+
 .dash {
 color: var(--blue-300);
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Router from 'next/router';
 import Head from 'next/head';
 import Sidebar from '../../components/intranet/sidebar';
-import styles from './relatorios.module.css';
+import styles from './intranet.module.css';
 import { TextField, Button, FormControl, Input, InputLabel } from '@material-ui/core/';
 
 function makeid(length) {

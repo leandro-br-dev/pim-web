@@ -54,56 +54,58 @@ export default class PanelCriptocoins extends Component {
 		return (
 			<section className={styles.criptocoins}>
 				<table>
-					<tr>
-						<th>
-							<h5>Criptomoeda</h5>
-						</th>
-						<th />
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<img src="/img/icon_bitcoin.png" alt="bitcoin" />
-								<h6>Bitcoin</h6>
-							</div>
-						</td>
-						<td>
-							<h6 className={styles.price}>{this.state.bitcoinPrice}</h6>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<img src="/img/icon_litecoin.png" alt="litecoin" />
-								<h6>Litecoin</h6>
-							</div>
-						</td>
-						<td>
-							<h6>{this.state.litecoinPrice}</h6>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<img src="/img/icon_zcash.png" alt="zcash" />
-								<h6>Zcash</h6>
-							</div>
-						</td>
-						<td>
-							<h6>{this.state.zcashPrice}</h6>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<img src="/img/icon_etherium.png" alt="etherium" />
-								<h6>Ethereum</h6>
-							</div>
-						</td>
-						<td>
-							<h6>{this.state.ethereumPrice}</h6>
-						</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>
+								<h5>Criptomoeda</h5>
+							</th>
+							<th />
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<img src="/img/icon_bitcoin.png" alt="bitcoin" />
+									<h6>Bitcoin</h6>
+								</div>
+							</td>
+							<td>
+								<h6 className={styles.price}>{this.state.bitcoinPrice}</h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<img src="/img/icon_litecoin.png" alt="litecoin" />
+									<h6>Litecoin</h6>
+								</div>
+							</td>
+							<td>
+								<h6>{this.state.litecoinPrice}</h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<img src="/img/icon_zcash.png" alt="zcash" />
+									<h6>Zcash</h6>
+								</div>
+							</td>
+							<td>
+								<h6>{this.state.zcashPrice}</h6>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<img src="/img/icon_etherium.png" alt="etherium" />
+									<h6>Ethereum</h6>
+								</div>
+							</td>
+							<td>
+								<h6>{this.state.ethereumPrice}</h6>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 			</section>
 		);
